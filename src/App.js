@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ProductDetails from './components/ProductDetails';
-import ProductsList from './components/Products/ProductsList';
+import Products from './components/Products';
+import ProductsList from './components/Products/Product';
 import Error404 from './error404/Error404';
 function App() {
   return (
@@ -9,13 +10,15 @@ function App() {
         <header>
           shopping cart
         </header>
-        <Switch>
+        
           <main>
-           <Route path="/" exact component={ProductsList}/>
+          <Switch>
+           <Route path="/" exact component={Products}/>
            <Route path="product/:productId" component={ProductDetails}/>
            <Route path="*" component={Error404} />
+           </Switch>
           </main>
-        </Switch>
+        
       </Router>
       <footer>
         All reserved.
