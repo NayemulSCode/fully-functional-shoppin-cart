@@ -21,9 +21,9 @@ const Products = () => {
     },[])
     console.log(products);
     return (
-        <>
+        <div className="md:flex flex-wrap content-between">
             <ProductsList />
-        </>
+        </div>
     )
 }
 
