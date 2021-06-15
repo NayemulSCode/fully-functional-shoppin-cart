@@ -3,7 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
-import { selectedProduct } from '../redux/actions/productAction';
+import { removeSelectedProduct, selectedProduct } from '../redux/actions/productAction';
 
 const ProductDetails = () => {
     const product = useSelector(state => state.product)
@@ -20,6 +20,7 @@ const ProductDetails = () => {
     }
     useEffect(()=>{
         if(productId && productId !== "") getProductDetails()
+        dispatch(removeSelectedProduct())
     },[productId]);
     return (
         <div className="max-w-md mx-auto bg-gray-200 rounded-xl shadow-md overflow-hidden md:max-w-7xl">
