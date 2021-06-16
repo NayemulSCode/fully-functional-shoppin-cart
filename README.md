@@ -9,3 +9,4 @@ run command: npm install --force -D tailwindcss@npm:@tailwindcss/postcss7-compat
 
 otherwise: run command: npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 
+## Redux without middleware
