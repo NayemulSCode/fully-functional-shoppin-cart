@@ -9,7 +9,7 @@ const Products = () => {
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(fetchProducts());
-    },[])
+    },[fetchProducts])
     console.log(products);
     return (
         <div className="md:flex flex-wrap content-between">
