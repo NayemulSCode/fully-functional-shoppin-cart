@@ -7,11 +7,12 @@ export const productReducer = (state = initialState, {type, payload}) =>{
     switch (type) {
         case ActionType.SET_PRODUCTS:
             return {...state, products: payload};  
+        case ActionType.FETCH_PRODUCTS:
+            return {...state, products: payload};  
         default:
             return state;
     }
 }
-
 export const selectedProductReducer = (state={}, {type, payload}) =>{
     switch (type){
         case ActionType.SELECTED_PRODUCT:
